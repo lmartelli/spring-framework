@@ -41,7 +41,7 @@ public abstract class ConversionException extends NestedRuntimeException {
 	 * @param cause the cause
 	 */
 	public ConversionException(String message, Throwable cause) {
-		super(message, cause);
+		super(message + (cause!=null ? ": " + cause.getMessage() : ""), cause);
 	}
 
 }
